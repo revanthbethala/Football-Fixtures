@@ -4,7 +4,7 @@ const axios = require("axios");
 const cors = require("cors");
 const app = express();
 const frontend_url = process.env.FRONTEND_URL || "";
-app.use(cors({origin:frontend_url}))
+app.use(cors({origin:"https://football-fixtures-5l4h.vercel.app"}))
 const port = 3000;
 
 const apiKey = process.env.FOOTBALL_API_KEY;
