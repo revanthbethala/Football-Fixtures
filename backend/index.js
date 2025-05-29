@@ -3,7 +3,8 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-app.use(cors())
+const frontend_url = process.env.FRONTEND_URL || "";
+app.use(cors({origin:frontend_url}))
 const port = 3000;
 
 const apiKey = process.env.FOOTBALL_API_KEY;
